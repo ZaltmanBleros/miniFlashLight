@@ -7,6 +7,8 @@
     <ToggleButton
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/toggleButton"/>
+            android:id="@+id/toggleButton"
+            android:background="@drawable/torch_button_bg"
+            android:textColor="@android:color/transparent"/>
 </LinearLayout>
 

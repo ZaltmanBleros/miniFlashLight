@@ -3,6 +3,7 @@ package com.bleros.zaltman.miniFlashLight;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.drawable.ColorDrawable;
 import android.hardware.Camera;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MiniFlashLight extends SmallApplication
         mConfig = new Configuration(getResources().getConfiguration());
         setContentView(R.layout.main);
         setTitle(R.string.app_name);
+        getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         SmallAppWindow.Attributes attr = getWindow().getAttributes();
         attr.flags &= ~SmallAppWindow.Attributes.FLAG_RESIZABLE;
