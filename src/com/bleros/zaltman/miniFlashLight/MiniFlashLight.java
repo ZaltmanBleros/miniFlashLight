@@ -9,7 +9,7 @@ import com.sony.smallapp.SmallApplication;
 
 public class MiniFlashLight extends SmallApplication
 {
-    private static Camera mCamera = null;
+    private Camera mCamera = null;
 
     @Override
     public void onCreate()
@@ -63,7 +63,6 @@ public class MiniFlashLight extends SmallApplication
 
     public void flashLightOn()
     {
-
         try
         {
             if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH))
