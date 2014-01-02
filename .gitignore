@@ -2,3 +2,5 @@
 gen
 *.iml
 local.properties
+proguard_logs
+miniFlashLight.apk
