@@ -20,10 +20,7 @@ public class MiniFlashLight extends SmallApplication
     @Override
     public void onCreate()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "onCreate()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "onCreate()");
         super.onCreate();
 
         mConfig = new Configuration(getResources().getConfiguration());
@@ -59,40 +56,28 @@ public class MiniFlashLight extends SmallApplication
     @Override
     public void onStart()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "onStart()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "onStart()");
         super.onStart();
     }
 
     @Override
     public void onStop()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "onStop()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "onStop()");
         super.onStop();
     }
 
     @Override
     public void onDestroy()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "onDestroy()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "onDestroy()");
         super.onDestroy();
         flashLightOff();
     }
 
     public boolean flashLightOn()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "flashLightOn()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "flashLightOn()");
         try
         {
             if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH))
@@ -115,10 +100,7 @@ public class MiniFlashLight extends SmallApplication
 
     public void flashLightOff()
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "flashLightOff()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "flashLightOff()");
         try
         {
             if ((mCamera != null) && getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH))
@@ -137,20 +119,14 @@ public class MiniFlashLight extends SmallApplication
     @Override
     protected boolean onSmallAppConfigurationChanged(Configuration newConfig)
     {
-        if (BuildConfig.DEBUG)
-        {
-            Log.d(TAG, "onSmallAppConfigurationChanged()");
-        }
+        if (BuildConfig.DEBUG) Log.d(TAG, "onSmallAppConfigurationChanged()");
         int diff = newConfig.diff(mConfig);
         mConfig = new Configuration(getResources().getConfiguration());
 
         // Avoid application from restarting when orientation changed
         if ((diff & ActivityInfo.CONFIG_ORIENTATION) != 0)
         {
-            if (BuildConfig.DEBUG)
-            {
-                Log.d(TAG, "onSmallAppConfigurationChanged() - change of orientation detected...");
-            }
+            if (BuildConfig.DEBUG) Log.d(TAG, "onSmallAppConfigurationChanged() - change of orientation detected...");
             return true;
         }
 
