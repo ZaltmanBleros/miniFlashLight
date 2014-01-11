@@ -1,4 +1,4 @@
 miniFlashLight
 ==============
 
-Android flash light mini-app (Sony devices)
+Android flash light small-app (Sony devices)
